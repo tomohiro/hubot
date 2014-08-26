@@ -19,6 +19,6 @@
       "description": "A service token you are given when you add Hubot to your Team Services.",
       "generator": "secret"
     }
-  }
+  },
   "addons": ["rediscloud"]
 }
