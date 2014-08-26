@@ -5,19 +5,21 @@
   "keywords": ["node.js", "hubot", "slack"],
   "website": "http://hubot-twitterokinawa.herokuapp.com",
   "env": {
-    "TZ": "Asia/Tokyo",
-    "HEROKU_URL": "http://hubot-twitterokinawa.herokuapp.com",
+    "TZ": {
+      "descirption": "Timezone",
+      "value": "Asia/Tokyo"
+    },
     "HUBOT_SLACK_BOTNAME": {
       "description": "What your Hubot is called on Slack",
-      "generator": "secret"
+      "value": "hubot"
     },
     "HUBOT_SLACK_TEAM": {
       "description": "This is your team's Slack subdomain.",
-      "generator": "secret"
+      "value": "YOUR TEAM"
     },
     "HUBOT_SLACK_TOKEN": {
       "description": "A service token you are given when you add Hubot to your Team Services.",
-      "generator": "secret"
+      "value": "YOUR TOKEN"
     }
   },
   "addons": ["rediscloud"]
