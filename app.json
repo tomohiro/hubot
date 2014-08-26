@@ -1,0 +1,24 @@
+{
+  "name": "Hubot",
+  "description": "Hubot on Slack",
+  "repository": "https://github.com/Tomohiro/hubot",
+  "keywords": ["node.js", "hubot", "slack"],
+  "website": "http://hubot-twitterokinawa.herokuapp.com",
+  "env": {
+    "TZ": "Asia/Tokyo",
+    "HEROKU_URL": "http://hubot-twitterokinawa.herokuapp.com",
+    "HUBOT_SLACK_BOTNAME": {
+      "description": "What your Hubot is called on Slack",
+      "generator": "secret"
+    },
+    "HUBOT_SLACK_TEAM": {
+      "description": "This is your team's Slack subdomain.",
+      "generator": "secret"
+    },
+    "HUBOT_SLACK_TOKEN": {
+      "description": "A service token you are given when you add Hubot to your Team Services.",
+      "generator": "secret"
+    }
+  }
+  "addons": ["rediscloud"]
+}
