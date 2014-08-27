@@ -1,160 +1,174 @@
 Hubot
 ================================================================================
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](deploy)
 
-This is a version of GitHub's Slack bot, hubot. He's pretty cool.
+This is a version of my private chatterbot, [hubot](hubot) on [Slack](slack). He's pretty cool.
 
-This version is designed to be deployed on [Heroku][heroku]. This README was generated for you by hubot to help get you started. Definitely update and improve to talk about your own instance, how to use and deploy, what functionality he has, etc!
+This version is designed to be deployed on [Heroku][heroku].
 
+[hubot]: https://hubot.github.io
 [heroku]: http://www.heroku.com
+[deploy]: https://heroku.com/deploy
+[slack]: https://slack.com
+
+
+Development
+--------------------------------------------------------------------------------
+
+### Requirements
+
+- Node.js
+- npm
+- Redis
+
+
+### Getting Started
+
+Clone this repository:
+
+```sh
+$ git clone git@github.com:Tomohiro/hubot.git
+```
+
+Install dependencies:
+
+```sh
+$ npm i
+```
+
 
 ### Testing Hubot Locally
 
-You can test your hubot by running the following.
+You can test your hubot by running the following:
 
-    % bin/hubot
+```sh
+$ redis &
+$ bin/hubot
+```
 
-You'll see some start up output about where your scripts come from and a
-prompt.
+Then you can interact with hubot by typing `hubot help`:
 
-    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading adapter shell
-    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading scripts from /home/tomb/Development/hubot/scripts
-    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading scripts from /home/tomb/Development/hubot/src/scripts
-    Hubot>
+```
+Hubot> hubot help
 
-Then you can interact with hubot by typing `hubot help`.
+Hubot> animate me <query> - The same thing as `image me`, except adds a few
+convert me <expression> to <units> - Convert expression to given units.
+help - Displays all of the help commands that Hubot knows about.
+...
+```
 
-    Hubot> hubot help
+Do you want to quit? Just type `hubot die`:
 
-    Hubot> animate me <query> - The same thing as `image me`, except adds a few
-    convert me <expression> to <units> - Convert expression to given units.
-    help - Displays all of the help commands that Hubot knows about.
-    ...
+```
+Hubot> hubot die
+Hubot> Goodbye, cruel world.
+```
+
+### Initial setup to Heroku
+
+Create a Heroku app:
+
+```sh
+$ heroku create {YOUR_HUBOT_APP_NAME}
+```
+
+Activate the Hubot service on Slack and configure environment variables:
+
+```sh
+$ heroku config:add HUBOT_SLACK_TOKEN=...
+$ heroku config:add HUBOT_SLACK_TEAM=myteam
+$ heroku config:add HUBOT_SLACK_BOTNAME=hubot
+```
+
+Deploy and start the bot:
+
+```sh
+$ git push heroku master
+$ heroku ps:scale web=1
+```
 
 
-### Scripting
+### Slack adapter configuration
+
+See `hubot-slack`'s [document](https://github.com/tinyspeck/hubot-slack).
+
+
+Scripting
+--------------------------------------------------------------------------------
+
+### DIY
 
 Take a look at the scripts in the `./scripts` folder for examples.
 Delete any scripts you think are useless or boring.  Add whatever functionality you
-want hubot to have. Read up on what you can do with hubot in the [Scripting Guide](https://github.com/github/hubot/blob/master/docs/scripting.md).
+want hubot to have. Read up on what you can do with hubot in the [Scripting Guide](scripting).
 
-### Redis Persistence
+[scripting]: https://github.com/github/hubot/blob/master/docs/scripting.md
 
-If you are going to use the `redis-brain.coffee` script from `hubot-scripts`
-(strongly suggested), you will need to add the Redis to Go addon on Heroku which requires a verified
-account or you can create an account at [Redis to Go][redistogo] and manually
-set the `REDISTOGO_URL` variable.
 
-    % heroku config:set REDISTOGO_URL="..."
+### hubot-scripts
 
-If you don't require any persistence feel free to remove the
-`redis-brain.coffee` from `hubot-scripts.json` and you don't need to worry
-about redis at all.
+Hubot has collection of [community scripts](hubot-scripts), but it is old.
 
-[redistogo]: https://redistogo.com/
-
-## Adapters
-
-Adapters are the interface to the service you want your hubot to run on. This
-can be something like Campfire or IRC. There are a number of third party
-adapters that the community have contributed. Check
-[Hubot Adapters][hubot-adapters] for the available ones.
-
-If you would like to run a non-Campfire or shell adapter you will need to add
-the adapter package as a dependency to the `package.json` file in the
-`dependencies` section.
-
-Once you've added the dependency and run `npm install` to install it you can
-then run hubot with the adapter.
-
-    % bin/hubot -a <adapter>
-
-Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
-
-[hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
-
-## hubot-scripts
-
-There will inevitably be functionality that everyone will want. Instead
-of adding it to hubot itself, you can submit pull requests to
-[hubot-scripts][hubot-scripts].
-
-To enable scripts from the hubot-scripts package, add the script name with
+Anyway, to enable scripts from the hubot-scripts package, add the script name with
 extension as a double quoted string to the `hubot-scripts.json` file in this
 repo.
 
 [hubot-scripts]: https://github.com/github/hubot-scripts
 
-## external-scripts
 
-Tired of waiting for your script to be merged into `hubot-scripts`? Want to
-maintain the repository and package yourself? Then this added functionality
+### external-scripts
+
+Want to maintain the repository and package yourself? Then this added functionality
 maybe for you!
 
-Hubot is now able to load scripts from third-party `npm` packages! To enable
-this functionality you can follow the following steps.
+Hubot is now able to load scripts from [new community scripts](https://github.com/hubot-scripts)
+or third-party `npm` packages! To enable this functionality you can follow
+the following steps.
 
-1. Add the packages as dependencies into your `package.json`
-2. `npm install` to make sure those packages are installed
+Add the packages as dependencies into your `package.json` like this:
+
+```sh
+$ npm i {package} --save
+```
 
 To enable third-party scripts that you've added you will need to add the package
 name as a double quoted string to the `external-scripts.json` file in this repo.
 
-## Deployment
 
-    % heroku create --stack cedar
-    % git push heroku master
-    % heroku ps:scale app=1
+Operation
+--------------------------------------------------------------------------------
 
-If your Heroku account has been verified you can run the following to enable
-and add the Redis to Go addon to your app.
+### Deployment
 
-    % heroku addons:add redistogo:nano
+Push repository to Heroku:
 
-If you run into any problems, checkout Heroku's [docs][heroku-node-docs].
+```sh
+$ git push heroku master
+```
 
-You'll need to edit the `Procfile` to set the name of your hubot.
+Or, if you want deploy this project to own heroku app, click the "Heroku Deploy" button:
 
-More detailed documentation can be found on the
-[deploying hubot onto Heroku][deploy-heroku] wiki page.
 
-### Deploying to UNIX or Windows
-
-If you would like to deploy to either a UNIX operating system or Windows.
-Please check out the [deploying hubot onto UNIX][deploy-unix] and
-[deploying hubot onto Windows][deploy-windows] wiki pages.
-
-[heroku-node-docs]: http://devcenter.heroku.com/articles/node-js
-[deploy-heroku]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
-[deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
-[deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
-
-## Campfire Variables
-
-If you are using the Campfire adapter you will need to set some environment
-variables. Refer to the documentation for other adapters and the configuraiton
-of those, links to the adapters can be found on [Hubot Adapters][hubot-adapters].
-
-Create a separate Campfire user for your bot and get their token from the web
-UI.
-
-    % heroku config:set HUBOT_CAMPFIRE_TOKEN="..."
-
-Get the numeric IDs of the rooms you want the bot to join, comma delimited. If
-you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42`
-and `https://mysubdomain.campfirenow.com/room/1024` then you'd add it like this:
-
-    % heroku config:set HUBOT_CAMPFIRE_ROOMS="42,1024"
-
-Add the subdomain hubot should connect to. If you web URL looks like
-`http://mysubdomain.campfirenow.com` then you'd add it like this:
-
-    % heroku config:set HUBOT_CAMPFIRE_ACCOUNT="mysubdomain"
-
-[hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
-
-## Restart the bot
+### Restart the bot, watch logs
 
 You may want to get comfortable with `heroku logs` and `heroku restart`
 if you're having issues.
+
+Restart:
+
+```sh
+$ heroku restart
+```
+
+tail:
+
+```sh
+$ heroku logs
+```
+
+Realtime monitoring:
+
+```sh
+$ heroku logs --tail
+```
