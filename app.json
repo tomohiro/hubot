@@ -9,17 +9,21 @@
       "descirption": "Timezone",
       "value": "Asia/Tokyo"
     },
-    "HUBOT_SLACK_BOTNAME": {
-      "description": "What your Hubot is called on Slack",
-      "value": "hubot"
+    "HUBOT_XMPP_HOST": {
+      "description": "The XMPP host name.",
+      "value": "conference.{your_team}.xmpp.slack.com"
     },
-    "HUBOT_SLACK_TEAM": {
-      "description": "This is your team's Slack subdomain.",
-      "value": "YOUR TEAM"
+    "HUBOT_XMPP_PASSWORD": {
+      "description": "Your password.",
+      "value": ""
     },
-    "HUBOT_SLACK_TOKEN": {
-      "description": "A service token you are given when you add Hubot to your Team Services.",
-      "value": "YOUR TOKEN"
+    "HUBOT_XMPP_ROOMS": {
+      "description": "Can be a comma separated list of rooms to join.",
+      "value": "general@conference.{your_team}.xmpp.slack.com"
+    },
+    "HUBOT_XMPP_USERNAME": {
+      "description": "Your XMPP or Jabber ID is in the user@host format.",
+      "value": "hubot@{your_team}.xmpp.slack.com"
     }
   },
   "addons": ["rediscloud"]

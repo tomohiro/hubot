@@ -73,12 +73,14 @@ Create a Heroku app:
 $ heroku create {YOUR_HUBOT_APP_NAME}
 ```
 
-Activate the Hubot service on Slack and configure environment variables:
+Enable XMPP gateway (SSL only) at Slack's administration and configure
+environment variables:
 
 ```sh
-$ heroku config:add HUBOT_SLACK_TOKEN=...
-$ heroku config:add HUBOT_SLACK_TEAM=myteam
-$ heroku config:add HUBOT_SLACK_BOTNAME=hubot
+$ heroku config:add HUBOT_XMPP_HOST=conference.{your_team}.xmpp.slack.com
+$ heroku config:add HUBOT_XMPP_PASSWORD=...
+$ heroku config:add HUBOT_XMPP_ROOMS=general@conference.{your_team}.xmpp.slack.com,randam@conference.{your_team}.xmpp.slack.com
+$ heroku config:add HUBOT_XMPP_USERNAME=hubot@{your_team}.xmpp.slack.com
 ```
 
 Deploy and start the bot:
@@ -89,9 +91,9 @@ $ heroku ps:scale web=1
 ```
 
 
-### Slack adapter configuration
+### XMPP adapter configuration
 
-See `hubot-slack`'s [document](https://github.com/tinyspeck/hubot-slack).
+See `hubot-xmpp`'s [document](https://github.com/markstory/hubot-xmpp).
 
 
 Scripting
