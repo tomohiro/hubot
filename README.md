@@ -1,11 +1,11 @@
 Hubot
 ================================================================================
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)][deploy]
 
-This is a version of my private chatterbot, [hubot](hubot) on [Slack](slack). He's pretty cool.
+This is a version of my private chatterbot, [hubot][] on [Slack][]. He's pretty cool.
 
-This version is designed to be deployed on [Heroku][heroku].
+This version is designed to be deployed on [Heroku][].
 
 [hubot]: https://hubot.github.io
 [heroku]: http://www.heroku.com
@@ -103,14 +103,14 @@ Scripting
 
 Take a look at the scripts in the `./scripts` folder for examples.
 Delete any scripts you think are useless or boring.  Add whatever functionality you
-want hubot to have. Read up on what you can do with hubot in the [Scripting Guide](scripting).
+want hubot to have. Read up on what you can do with hubot in the [Scripting Guide][scripting].
 
 [scripting]: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 
 ### hubot-scripts
 
-Hubot has collection of [community scripts](hubot-scripts), but it is old.
+Hubot has collection of [community scripts][hubot-scripts], but it is old.
 
 Anyway, to enable scripts from the hubot-scripts package, add the script name with
 extension as a double quoted string to the `hubot-scripts.json` file in this
