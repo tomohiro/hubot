@@ -13,6 +13,25 @@ This version is designed to be deployed on [Heroku][].
 [slack]: https://slack.com
 
 
+Table of Contents
+--------------------------------------------------------------------------------
+
+- [Development](#user-content-development)
+	- [Requirements](#user-content-requirements)
+	- [Getting Started](#user-content-getting-started)
+	- [Testing Hubot Locally](#user-content-testing-hubot-locally)
+	- [Initial setup to Heroku](#user-content-initial-setup-to-heroku)
+	- [XMPP adapter configuration](#user-content-xmpp-adapter-configuration)
+- [Scripting](#user-content-scripting)
+	- [DIY](#user-content-diy)
+	- [hubot-scripts](#user-content-hubot-scripts)
+	- [external-scripts](#user-content-external-scripts)
+- [Operation](#user-content-operation)
+	- [Deployment](#user-content-deployment)
+	- [Restart the bot, watch logs](#user-content-restart-the-bot-watch-logs)
+	- [Checking environment variables](#user-content-checking-environment-variables)
+
+
 Development
 --------------------------------------------------------------------------------
 
