@@ -1,6 +1,5 @@
 [
   "hubot-deploy",
-  "hubot-auto-deploy",
   "hubot-cron",
   "hubot-sushiyuki",
   "hubot-animemap",
