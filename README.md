@@ -21,6 +21,7 @@ Development
 - Node.js
 - npm
 - Redis
+- [app.json](https://github.com/app-json/app.json) (Recommended)
 
 
 ### Getting Started
@@ -173,4 +174,18 @@ Realtime monitoring:
 
 ```sh
 $ heroku logs --tail
+```
+
+### Checking environment variables
+
+Show environment variables:
+
+```sh
+$ heroku config
+```
+
+Export shell friendly:
+
+```sh
+$ heroku config --shell
 ```
