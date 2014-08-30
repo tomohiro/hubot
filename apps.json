@@ -1,7 +1,7 @@
 {
   "hubot": {
     "provider": "heroku",
-    "auto_merge": true,
+    "auto_merge": false,
     "repository": "Tomohiro/hubot",
     "environments": ["production"],
     "heroku_production_name": "twitterokinawa-hubot"
