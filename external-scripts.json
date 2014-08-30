@@ -1,1 +1,8 @@
-["hubot-cron", "hubot-sushiyuki", "hubot-animemap", "hubot-meshi", "hubot-zoi"]
+[
+  "hubot-cron",
+  "hubot-sushiyuki",
+  "hubot-animemap",
+  "hubot-meshi",
+  "hubot-zoi",
+  "hubot-deploy"
+]
