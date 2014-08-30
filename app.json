@@ -24,6 +24,26 @@
     "HUBOT_XMPP_USERNAME": {
       "description": "Your XMPP or Jabber ID is in the user@host format.",
       "value": "hubot@{your_team}.xmpp.slack.com"
+    },
+    "HUBOT_DEPLOY_APPS_JSON": {
+      "description": "Application configrations to hubot-deploy",
+      "value": "deploy.json"
+    },
+    "HUBOT_GITHUB_TOKEN": {
+      "description": "GitHub User Token to GitHub deployment API",
+      "value": "c397f6c51ae25d057a8d2c8335ea06c0e09094d3"
+    },
+    "HUBOT_ANIMEMAP_PREF": {
+      "description": "Anime broadcasting area in Japan to hubot-animemap",
+      "value": "tokyo"
+    },
+    "HUBOT_NULLPO_RESPONSE_STYLE": {
+      "description": "NullPointerException joke configuration to hubot-nullpo ('rich' means using AA)",
+      "value": "rich"
+    },
+    "HUBOT_ZOI_SOURCE_URL": {
+      "description": "Zoi source url to hubot-zoi",
+      "value": ""
     }
   },
   "addons": ["rediscloud"]
