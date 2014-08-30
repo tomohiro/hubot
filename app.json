@@ -1,7 +1,6 @@
 {
   "name": "Hubot",
-  "description": "Hubot on Slack",
-  "repository": "https://github.com/Tomohiro/hubot",
+  "description": "Hubot on Slack", "repository": "https://github.com/Tomohiro/hubot",
   "keywords": ["node.js", "hubot", "slack"],
   "website": "http://twitterokinawa-hubot.herokuapp.com",
   "env": {
@@ -44,7 +43,23 @@
     "HUBOT_ZOI_SOURCE_URL": {
       "description": "Zoi source url to hubot-zoi",
       "value": ""
-    }
-  },
-  "addons": ["rediscloud"]
+    },
+    "HUBOT_TWITTER_ACCESS_TOKEN": {
+      "description": "Twitter access token to hubot-tweets",
+      "value": ""
+    },
+    "HUBOT_TWITTER_ACCESS_TOKEN_SECRET": {
+      "description": "Twitter access token secret to hubot-tweets",
+      "value": ""
+    },
+    "HUBOT_TWITTER_CONSUMER_KEY": {
+      "description": "Twitter consumer key to hubot-tweets",
+      "value": ""
+    },
+    "HUBOT_TWITTER_CONSUMER_SECRET": {
+      "description": "Twitter consumer secret to hubot-tweets",
+      "value": ""
+    },
+    "addons": ["rediscloud"]
+  }
 }
