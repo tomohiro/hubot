@@ -32,6 +32,7 @@
     "hubot-nullpo": "0.0.3",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
     "hubot-sushiyuki": "0.0.8",
+    "hubot-tweets": "0.0.1",
     "hubot-xmpp": "^0.1.11",
     "hubot-youtube": "^0.1.2",
     "hubot-zoi": "^0.1.0"
