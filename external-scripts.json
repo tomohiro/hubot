@@ -4,5 +4,6 @@
   "hubot-animemap",
   "hubot-meshi",
   "hubot-zoi",
-  "hubot-deploy"
+  "hubot-deploy",
+  "hubot-auto-deploy"
 ]
