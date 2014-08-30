@@ -1,5 +1,6 @@
 [
   "hubot-help",
+  "hubot-google-translate",
   "hubot-deploy",
   "hubot-cron",
   "hubot-sushiyuki",
