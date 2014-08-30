@@ -1,6 +1,7 @@
 [
   "hubot-help",
   "hubot-google-translate",
+  "hubot-youtube",
   "hubot-deploy",
   "hubot-cron",
   "hubot-sushiyuki",
