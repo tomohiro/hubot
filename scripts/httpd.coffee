@@ -22,7 +22,7 @@ spawn = require('child_process').spawn
 module.exports = (robot) ->
 
   robot.router.get "/", (req, res) ->
-    res.end "https://github.com/Tomohiro/hubot"
+    res.end '<a href="https://github.com/Tomohiro/hubot">hubot</a>'
 
   robot.router.get "/hubot/version", (req, res) ->
     res.end robot.version
