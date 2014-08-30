@@ -5,5 +5,12 @@
     "repository": "Tomohiro/hubot",
     "environments": ["production"],
     "heroku_production_name": "twitterokinawa-hubot"
+  },
+  "Tomochan": {
+    "provider": "heroku",
+    "auto_merge": false,
+    "repository": "Tomohiro/Tomochan",
+    "environments": ["production"],
+    "heroku_production_name": "tomochan"
   }
 }
