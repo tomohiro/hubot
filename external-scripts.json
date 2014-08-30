@@ -1,4 +1,5 @@
 [
+  "hubot-help",
   "hubot-deploy",
   "hubot-cron",
   "hubot-sushiyuki",
