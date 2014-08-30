@@ -1,9 +1,10 @@
 [
+  "hubot-deploy",
+  "hubot-auto-deploy",
   "hubot-cron",
   "hubot-sushiyuki",
   "hubot-animemap",
   "hubot-meshi",
   "hubot-zoi",
-  "hubot-deploy",
-  "hubot-auto-deploy"
+  "hubot-nullpo"
 ]

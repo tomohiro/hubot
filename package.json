@@ -27,6 +27,7 @@
     "hubot-cron": "~0.2.5",
     "hubot-deploy": "^0.6.44",
     "hubot-meshi": "0.0.1",
+    "hubot-nullpo": "0.0.3",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
     "hubot-sushiyuki": "0.0.8",
     "hubot-xmpp": "^0.1.11",
