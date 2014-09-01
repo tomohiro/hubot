@@ -5,6 +5,7 @@
   "hubot-deploy",
   "hubot-cron",
   "hubot-tweets",
+  "hubot-rss-reader",
   "hubot-sushiyuki",
   "hubot-animemap",
   "hubot-meshi",
