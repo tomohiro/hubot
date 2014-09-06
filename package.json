@@ -33,6 +33,7 @@
     "hubot-nullpo": "0.0.3",
     "hubot-rss-reader": "^0.3.1",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
+    "hubot-shinchoku": "0.0.1",
     "hubot-sushiyuki": "0.0.8",
     "hubot-tweets": "0.0.1",
     "hubot-xmpp": "^0.1.11",
