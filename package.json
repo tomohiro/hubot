@@ -23,6 +23,7 @@
   "dependencies": {
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-animemap": "0.0.1",
+    "hubot-at": "0.0.4",
     "hubot-auto-deploy": "^0.1.9",
     "hubot-cron": "~0.2.5",
     "hubot-deploy": "^0.6.44",
