@@ -21,7 +21,7 @@ Table of Contents
 	- [Getting Started](#user-content-getting-started)
 	- [Testing Hubot Locally](#user-content-testing-hubot-locally)
 	- [Initial setup to Heroku](#user-content-initial-setup-to-heroku)
-	- [XMPP adapter configuration](#user-content-xmpp-adapter-configuration)
+	- [Slack configuration](#user-content-slack-configuration)
 - [Scripting](#user-content-scripting)
 	- [DIY](#user-content-diy)
 	- [hubot-scripts](#user-content-hubot-scripts)
