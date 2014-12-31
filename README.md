@@ -21,7 +21,7 @@ Table of Contents
     - [Getting Started](#getting-started)
     - [Testing Hubot Locally](#testing-hubot-locally)
     - [Initial setup to Heroku](#initial-setup-to-heroku)
-    - [Slack configuration](#slack-configuration)
+    - [Slack adapter configuration](#slack-adapter-configuration)
 - [Scripting](#scripting)
     - [DIY](#diy)
     - [hubot-scripts](#hubot-scripts)
