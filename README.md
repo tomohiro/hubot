@@ -16,20 +16,20 @@ This version is designed to be deployed on [Heroku][].
 Table of Contents
 --------------------------------------------------------------------------------
 
-- [Development](#user-content-development)
-	- [Requirements](#user-content-requirements)
-	- [Getting Started](#user-content-getting-started)
-	- [Testing Hubot Locally](#user-content-testing-hubot-locally)
-	- [Initial setup to Heroku](#user-content-initial-setup-to-heroku)
-	- [Slack configuration](#user-content-slack-configuration)
-- [Scripting](#user-content-scripting)
-	- [DIY](#user-content-diy)
-	- [hubot-scripts](#user-content-hubot-scripts)
-	- [external-scripts](#user-content-external-scripts)
-- [Operation](#user-content-operation)
-	- [Deployment](#user-content-deployment)
-	- [Restart the bot, watch logs](#user-content-restart-the-bot-watch-logs)
-	- [Checking environment variables](#user-content-checking-environment-variables)
+- [Development](#development)
+    - [Requirements](#requirements)
+    - [Getting Started](#getting-started)
+    - [Testing Hubot Locally](#testing-hubot-locally)
+    - [Initial setup to Heroku](#initial-setup-to-heroku)
+    - [Slack configuration](#slack-configuration)
+- [Scripting](#scripting)
+    - [DIY](#diy)
+    - [hubot-scripts](#hubot-scripts)
+    - [external-scripts](#external-scripts)
+- [Operation](#operation)
+    - [Deployment](#deployment)
+    - [Restart the bot, watch logs](#restart-the-bot-watch-logs)
+    - [Checking environment variables](#checking-environment-variables)
 
 
 Development
