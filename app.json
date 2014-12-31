@@ -8,21 +8,9 @@
       "descirption": "Timezone",
       "value": "Asia/Tokyo"
     },
-    "HUBOT_XMPP_HOST": {
-      "description": "The XMPP host name.",
-      "value": "conference.{your_team}.xmpp.slack.com"
-    },
-    "HUBOT_XMPP_PASSWORD": {
-      "description": "Your password.",
+    "HUBOT_SLACK_TOKEN": {
+      "description": "Slack API token",
       "value": ""
-    },
-    "HUBOT_XMPP_ROOMS": {
-      "description": "Can be a comma separated list of rooms to join.",
-      "value": "general@conference.{your_team}.xmpp.slack.com"
-    },
-    "HUBOT_XMPP_USERNAME": {
-      "description": "Your XMPP or Jabber ID is in the user@host format.",
-      "value": "hubot@{your_team}.xmpp.slack.com"
     },
     "HUBOT_DEPLOY_APPS_JSON": {
       "description": "Application configrations to hubot-deploy",
