@@ -1,4 +1,4 @@
-Hubot
+Hubot [![Dependency Status](https://david-dm.org/Tomohiro/hubot.svg?style=flat-square)](https://david-dm.org/Tomohiro/hubot)
 ================================================================================
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)][deploy]
