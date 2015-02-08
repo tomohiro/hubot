@@ -47,7 +47,7 @@
     "HUBOT_TWITTER_CONSUMER_SECRET": {
       "description": "Twitter consumer secret to hubot-tweets",
       "value": ""
-    },
-    "addons": ["rediscloud"]
-  }
+    }
+  },
+  "addons": ["rediscloud"]
 }
