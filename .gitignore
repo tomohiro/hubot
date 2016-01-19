@@ -1,3 +1,14 @@
+# Node.js
 node_modules
+
+# Hubot
+.hubot_history
+
+# Direnv
+.envrc
+
+# OS X
 .DS_Store*
-*.log
+
+# Redis
+dump.rdb
